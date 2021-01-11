@@ -5,7 +5,7 @@ Task: Getting the URLs for Media Files (MP3/ MP4) by a scraping program, pass th
 # First Problem/ Understanding 
 
 The html structure of a website is mostly unique -> for every website there has to be an individual html path
-'''csharp
+```csharp
             
             Console.WriteLine("Bitte geben sie eine Webseiten URL ein die druchsucht werden soll:");
 
@@ -17,5 +17,5 @@ The html structure of a website is mostly unique -> for every website there has 
             WebClient wc = new WebClient();
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             wc.DownloadFile(webseite, @"sourceFile.html");
-'''
+``` 
 
