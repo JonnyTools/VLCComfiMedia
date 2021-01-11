@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ComfiMedia.Views.MainPage"
+             xmlns:model="clr-namespace:ComfiMedia.Model"
+             xmlns:viewmodel="clr-namespace:ComfiMedia.ViewModels"
+             Title="{Binding Title}"
+             x:DataType="viewmodel:MainPageViewModel">
+
+
+
+    <Grid ColumnSpacing="5" RowSpacing="0"
+          BackgroundColor="{StaticResource Primary}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--
+           
+            ItemSelected="ListView_ItemSelected"
+            RefreshCommand="{Binding GetMediaCommand}"
+        -->
+        <RefreshView IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                     Command="{Binding GetMediaCommand}"
+                     
+                     
+                     Grid.ColumnSpan="2">
+            <CollectionView
+                x:Name="MyCollectionView" 
+                Grid.ColumnSpan="2"
+                ItemsSource="{Binding Playlist}"
+                SelectionMode="Single"
+                SelectionChangedCommand="{Binding OpenDetailsCommand}"
+                SelectionChangedCommandParameter="{Binding SelectedItem,
+                Source={x:Reference MyCollectionView}}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="100">
+                        <Image
+                            Aspect="AspectFill"
+                            Source="StartSymbol.png"
+                        />
+                        <Label HorizontalOptions="Center" FontSize="30" FontAttributes="Bold"  TextColor="Black" Text="ComfiMedia" />
+
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Media">
+                        <Frame
+                            Margin=" 10,5"
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="10"
+                            HeightRequest="125"
+                            InputTransparent="True"
+                            IsClippedToBounds="True"
+                            HasShadow="True"
+                            Visual="Material">
+                            <Grid Padding=" 0" ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="125"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Aspect="AspectFill" Source="{Binding Picture}"/>
+                                <StackLayout
+                                               Grid.Column="1"
+                                               Padding="10"
+                                               VerticalOptions="Center" >
+                                    <Label FontSize="Large" Text="{Binding Title}" />
+                                    <Label FontSize="Medium" Text="{Binding Rating,StringFormat='Rating: {0:N}'}" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <Button 
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="8"
+            Command="{Binding GetMediaCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Text="Refresh"
+            Style="{StaticResource ButtonOutline}"
+            />
+
+    </Grid>
+    
+</ContentPage>

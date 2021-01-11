@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:viewmodel="clr-namespace:ComfiMedia.ViewModels"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ComfiMedia.Views.DetailsPage"
+             Title="{Binding Title}"
+             x:DataType="viewmodel:DetailsPageViewModel">
+    
+
+
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <BoxView BackgroundColor="{StaticResource Primary}" HorizontalOptions="FillAndExpand"
+                  HeightRequest="100" Grid.ColumnSpan="3"/>
+
+                <StackLayout Grid.RowSpan="2" Grid.Column="1" Margin="0,50,0,0">
+                    <Image
+                        Aspect="AspectFill"
+                        HeightRequest="100"
+                        Source="{Binding SelectedMedia.Picture}"
+                        VerticalOptions="Center"
+                        WidthRequest="100">
+                        <Image.Clip>
+                            <EllipseGeometry
+                                Center="50,50"
+                                RadiusX="50"
+                                RadiusY="50" />
+                        </Image.Clip>
+                    </Image>
+                </StackLayout>
+
+                <Label
+                    Grid.Row="1"
+                    Margin="10"
+                    FontSize="Small"
+                    HorizontalOptions="Center"
+                    Text="{Binding SelectedMedia.Rating, StringFormat='Rating: {0:N}'}" 
+                 />
+            </Grid>
+            <Label
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HorizontalOptions="Center"
+                Text="{Binding SelectedMedia.Title }" 
+            />
+
+            <Button 
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="8"
+            Text="START"
+            Style="{StaticResource ButtonOutline}"
+            Command="{Binding OpenPlayerCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            />
+            <Label Margin="5" FontAttributes="Bold" FontSize="Small" Text="Description:"/>
+            <Label Margin="10" Text="{Binding SelectedMedia.Description}" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

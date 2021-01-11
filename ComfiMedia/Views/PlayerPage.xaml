@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vlc="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"           
+             x:Class="ComfiMedia.Views.PlayerPage"
+             x:DataType="viewmodel:PlayerPageViewModel"
+             xmlns:viewmodel="clr-namespace:ComfiMedia.ViewModels"
+             Appearing="OnAppearing"
+             >
+    <!--Disappearing="OnDisappearing"-->
+             
+
+
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <vlc:MediaPlayerElement MediaPlayer="{Binding MediaPlayer}" LibVLC="{Binding LibVLC}" VerticalOptions="FillAndExpand" EnableRendererDiscovery="True" />
+            <!--<Button Text=" GO BACK" Command="{Binding OpenPlayerCommand}" />-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
