@@ -4,19 +4,35 @@ Task: Getting URLs for Media Files (MP3/ MP4) by a scraping program, pass them v
 
 # First Problem/ Understanding 
 
-The html structure of a website is mostly unique -> for every website there has to be an individual html path
+The html structure of a website is mostly unique -> for every website there has to be an individual html scraping path  
+(Hard work for complexly structured websites)
 ```csharp
-            
-            Console.WriteLine("Bitte geben sie eine Webseiten URL ein die druchsucht werden soll:");
-
-            string webseite = null;
+           // get target webseite
+            Console.Write("Bitte geben sie eine Webseite ein die durchsucht werden soll: ");
+            string webseite;
             webseite = Console.ReadLine();
+            Console.WriteLine("Seite " + webseite + " wird durchsucht...");
 
-
-            // donwload source coode of site
+            // download source code of site
             WebClient wc = new WebClient();
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            wc.DownloadFile(webseite, @"sourceFile.html");
+            string sourceCode = wc.DownloadString(webseite);
+
+            // manipulate source code
+            sourceCode.Replace("<!DOCTYPE html>", "");
+            sourceCode = Regex.Replace(sourceCode, @"(<.\s)([a-z])(>)", "$1$3");
+
+
+            XmlDocument siteSourceDoc = new XmlDocument();
+            siteSourceDoc.LoadXml(sourceCode);
+
+            IEnumerable < XElement > list = siteSourceDoc.XPathSelectElements("//*[@id="seriesContainer"]/div/ul/li/a");
+            foreach (XElement el in list)
+                Console.WriteLine(el);
+
+
+            Console.Write("Press any key to continue . . . ");
+            Console.ReadKey(true);
 ``` 
 
 # Workaround use Parsehub
