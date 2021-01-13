@@ -1,105 +1,49 @@
-[
+﻿[
   {
-    "Title": "Baboon",
-    "URL": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4",
-    "Description": "Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae.",
-    "Picture": "https://profile-images.xing.com/images/ae9609d70f99c6d417ac2e4381122636-1/olga-laukert.1024x1024.jpg",
-    "Rating": 23000
+    "Title": "Big Bucky Bunny",
+    "URL": "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg",
+    "Description": "As a follow-up to the successful project Orange’s “Elephants Dream”, the Blender Foundation initiated another open movie project. Again a small team (7) of the best 3D artists and developers in the Blender community have been invited to come together to work in Amsterdam from October 2007 until April 2008 on completing a short 3D animation movie. The team members will get a great studio facility and housing in Amsterdam, all travel costs reimbursed, and a fee sufficient to cover all expenses during the period.",
+    "Picture": "https://peach.blender.org/wp-content/uploads/bbb-splash.png",
+    "Rating": "unknown"
   },
   {
-    "Title": "Capuchin Monkey",
+    "Title": "radioeins livestream",
     "URL": "https://rbb-edge-10b7-fra-dtag-cdn.cast.addradio.de/rbb/radioeins/live/mp3/mid?_art=dj0yJmlwPTIuMjA1LjIxNy4xODQmaWQ9aWNzY3hsLWp4NWtjdHJuYiZ0PTE2MTAzODU5ODQmcz03ODY2ZjI5YyM0OWI2MTUwNmRjNjcyMmVjZTNiZDQ3NzNlZDQ1MjNlYg",
-    "Description": "The capuchin monkeys are New World monkeys of the subfamily Cebinae. Prior to 2011, the subfamily contained only a single genus, Cebus.",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/200px-Capuchin_Costa_Rica.jpg",
-    "Rating": 23000
+    "Description": "Nur für Erwachsene",
+    "Picture": "https://www.radioeins.de/content/dam/rbb/rbb/logos/touch/rad-192.png",
+    "Rating": "it's good"
 
   },
   {
-    "Title": "Blue Monkey",
-    "URL": "https://seedxvj21.bitchute.com/CoLnlixyhpQq/kdYpbq8zToo.mp4",
-    "Description": "The blue monkey or diademed monkey is a species of Old World monkey native to Central and East Africa, ranging from the upper Congo River basin east to the East African Rift and south to northern Angola and Zambia",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg",
-    "Rating": 12000
+    "Title": "HOW DID THIS HAPPEN?",
+    "URL": "https://seed1sjt3.bitchute.com/49XjfVl1JoyI/2PLkdEAPWBo.mp4",
+    "Description": "Some Bitchut-video",
+    "Picture": "https://www.bitchute.com/static/v129/images/logo-full-day.png",
+    "Rating": "unkown"
 
   },
   {
-    "Title": "Squirrel Monkey",
-    "URL": "Central & South America",
-    "Description": "The squirrel monkeys are the New World monkeys of the genus Saimiri. They are the only genus in the subfamily Saimirinae. The Title of the genus Saimiri is of Tupi origin, and was also used as an English Title by early researchers.",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Saimiri_sciureus-1_Luc_Viatour.jpg/220px-Saimiri_sciureus-1_Luc_Viatour.jpg",
-    "Rating": 11000
+    "Title": "Der satirische Jahresrückblick 2020",
+    "URL": "https://nrodlzdf-a.akamaihd.net/none/zdf/20/12/201219_sendung_f21/2/201219_sendung_f21_2128k_p18v15.webm",
+    "Description": "2020 zeigt: Auch kleine Sachen können groß herauskommen - zum Beispiel das kleine Arschloch Coronavirus.",
+    "Picture": "https://www.zdf.de/assets/titel-satirischer-jahresrueckblick-100~1280x720?cb=1608281956569",
+    "Rating": "funny^^"
 
   },
   {
-    "Title": "Golden Lion Tamarin",
-    "URL": "Brazil",
-    "Description": "The golden lion tamarin also known as the golden marmoset, is a small New World monkey of the family Callitrichidae.",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Golden_lion_tamarin_portrait3.jpg/220px-Golden_lion_tamarin_portrait3.jpg",
-    "Rating": 19000
+    "Title": "Toll! Wer zuletzt lacht",
+    "URL": "https://downloadzdf-a.akamaihd.net/mp4/zdf/21/01/210112_clip_6_f21/1/210112_clip_6_f21_3328k_p15v15.mp4",
+    "Description": "Donald Trump verkauft die wahlentscheidenden Bundesstaaten an Russland und gewinnt doch noch - eine satirische Prognose.",
+    "Picture": "https://www.zdf.de/assets/satire-toll-trump-102~1280x720?cb=1610470575890",
+    "Rating": 1.5
 
   },
   {
-    "Title": "Howler Monkey",
-    "URL": "South America",
-    "Description": "Howler monkeys are among the largest of the New World monkeys. Fifteen species are currently recognised. Previously classified in the family Cebidae, they are now placed in the family Atelidae.",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Alouatta_guariba.jpg/200px-Alouatta_guariba.jpg",
-    "Rating": 8000
-
-  },
-  {
-    "Title": "Japanese Macaque",
-    "URL": "Japan",
-    "Description": "The Japanese macaque, is a terrestrial Old World monkey species native to Japan. They are also sometimes known as the snow monkey because they live in areas where snow covers the ground for months each",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Macaca_fuscata_fuscata1.jpg/220px-Macaca_fuscata_fuscata1.jpg",
-    "Rating": 1000
-
-  },
-  {
-    "Title": "Mandrill",
-    "URL": "Southern Cameroon, Gabon, Equatorial Guinea, and Congo",
-    "Description": "The mandrill is a primate of the Old World monkey family, closely related to the baboons and even more closely to the drill. It is found in southern Cameroon, Gabon, Equatorial Guinea, and Congo.",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mandrill_at_san_francisco_zoo.jpg/220px-Mandrill_at_san_francisco_zoo.jpg",
-    "Rating": 17000
-
-  },
-  {
-    "Title": "Proboscis Monkey",
-    "URL": "Borneo",
-    "Description": "The proboscis monkey or long-nosed monkey, known as the bekantan in Malay, is a reddish-brown arboreal Old World monkey that is endemic to the south-east Asian island of Borneo.",
-    "Picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Proboscis_Monkey_in_Borneo.jpg/250px-Proboscis_Monkey_in_Borneo.jpg",
-    "Rating": 15000
- 
-  },
-  {
-    "Title": "Sebastian",
-    "URL": "Seattle",
-    "Description": "This little trouble maker lives in Seattle with James and loves traveling on adventures with James and tweeting @MotzMonkeys. He by far is an Android fanboy and is getting ready for the new Nexus 6P!",
-    "Picture": "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/sebastian.jpg",
-    "Rating": 1
-
-  },
-  {
-    "Title": "Henry",
-    "URL": "Phoenix",
-    "Description": "An adorable Monkey who is traveling the world with Heather and live tweets his adventures @MotzMonkeys. His favorite platform is iOS by far and is excited for the new iPhone Xs!",
-    "Picture": "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/henry.jpg",
-    "Rating": 1
-
-  },
-  {
-    "Title": "Red-shanked douc",
-    "URL": "Vietnam",
-    "Description": "The red-shanked douc is a species of Old World monkey, among the most colourful of all primates. The douc is an arboreal and diurnal monkey that eats and sleeps in the trees of the forest.",
-    "Picture": "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/douc.jpg",
-    "Rating": 1300
-
-  },
-  {
-    "Title": "Mooch",
-    "URL": "Seattle",
-    "Description": "An adorable Monkey who is traveling the world with Heather and live tweets his adventures @MotzMonkeys. His favorite platform is iOS by far and is excited for the new iPhone 6s!",
-    "Picture": "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/Mooch.PNG",
-    "Rating": 1
+    "Title": "Toll! Wer zuletzt lacht",
+    "URL": "Halolo Jann",
+    "Description": "Donald Trump verkauft die wahlentscheidenden Bundesstaaten an Russland und gewinnt doch noch - eine satirische Prognose.",
+    "Picture": "https://www.zdf.de/assets/satire-toll-trump-102~1280x720?cb=1610470575890",
+    "Rating": 1.5
 
   }
 ]

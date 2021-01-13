@@ -44,8 +44,11 @@ namespace ComfiMedia.ViewModels
         {
             if (IsBusy)
                 return;
+
+
             try
             {
+                IsBusy = true;
                 var _navigationParameters = new NavigationParameters();
                 _navigationParameters.Add("Title", media.Title);
                 _navigationParameters.Add("URL", media.URL);
@@ -59,7 +62,7 @@ namespace ComfiMedia.ViewModels
                 Debug.WriteLine($"Unable to get MediaDetails {ex.Message}");
                 if (Application.Current?.MainPage == null)
                     return;
-                await Application.Current.MainPage.DisplayAlert("Unable to get MediaDetails", "SomeText", "Mach ich später");
+                await Application.Current.MainPage.DisplayAlert("Unable to get MediaDetails", ex.Message, "Mach ich später");
             }
             finally
             {
@@ -84,7 +87,8 @@ namespace ComfiMedia.ViewModels
 
                 using (var resFilestream = a.GetManifestResourceStream("ComfiMedia.mediadata.json"))
                 {
-                    using (var reader = new System.IO.StreamReader(resFilestream))
+                    // Set Encoding to UTF 8
+                    using (var reader = new System.IO.StreamReader(resFilestream,Encoding.UTF8))
                         JsonMedia = await reader.ReadToEndAsync();
                 }
                 var medialist = JsonConvert.DeserializeObject<List<Media>>(JsonMedia);

@@ -46,6 +46,17 @@ namespace ComfiMedia.ViewModels
             try
             {
                 IsBusy = true;
+                var CheckURL = new Uri(media.URL);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get MediaDetails {ex.Message}");
+                IsBusy = false;
+                await Application.Current.MainPage.DisplayAlert("Unable to get MediaDetails", ex.Message, "Mach ich später");
+                return;
+            }
+            try
+            {
                 var _navigationParameters = new NavigationParameters();
                 _navigationParameters.Add("Title", media.Title);
                 _navigationParameters.Add("URL", media.URL);
@@ -58,8 +69,6 @@ namespace ComfiMedia.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine($"Unable to get MediaDetails {ex.Message}");
-                if (Application.Current?.MainPage == null)
-                    return;
                 await Application.Current.MainPage.DisplayAlert("Unable to get MediaDetails", ex.Message, "Mach ich später");
 
             }

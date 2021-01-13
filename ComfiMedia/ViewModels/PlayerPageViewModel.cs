@@ -16,9 +16,7 @@ namespace ComfiMedia.ViewModels
     public class PlayerPageViewModel : ViewModelBase
     {
         private readonly INavigationService _navigationService;
-        //private DelegateCommand _goBack;
-        //public DelegateCommand GoBackCommand =>
-        //   _goBack ?? (_goBack = new DelegateCommand(GoBack));
+
 
         public PlayerPageViewModel()
         {
@@ -88,6 +86,7 @@ namespace ComfiMedia.ViewModels
                 return;
             Core.Initialize();
             LibVLC = new LibVLC();
+
                 try
                 {
                     IsBusy = true;
@@ -98,13 +97,13 @@ namespace ComfiMedia.ViewModels
                 }
                 catch (Exception ex)
                 {
-                Debug.WriteLine($"Unable to Play URl:{SelectedMedia.URL} {ex.Message}");
-                // TO DO: display Error Message and go back !
+                    Debug.WriteLine($"Unable to Play URl:{SelectedMedia.URL} {ex.Message}");
                 }
                 finally
                 {
                     IsBusy = false;
                 }
+            
         }
 
         public override void Initialize(INavigationParameters parameters)
