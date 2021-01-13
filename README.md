@@ -1,6 +1,6 @@
 # **Prove of Concept** Understanding Website structre and extracting Media files
 
-Task: Getting the URLs for Media Files (MP3/ MP4) by a scraping program, pass them via json file to the Media Player Program which can mirror it to any chromecast devices
+Task: Getting URLs for Media Files (MP3/ MP4) by a scraping program, pass them via json file to the Media Player Program which can mirror it to any chromecast devices
 
 # First Problem/ Understanding 
 
